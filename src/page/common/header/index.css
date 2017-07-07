@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 21:18:29
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 21:40:37
+* @Last Modified time: 2017-07-07 22:46:18
 */
 /* 通用头部导航 */
 .header .logo{
@@ -26,6 +26,7 @@
     padding-left: 10px;
     font-size: 15px;
     border: 2px solid #c60023;
+    outline: none;
 }
 .header .search-con .search-btn{
     position: absolute;
