@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-06-30 19:16:33
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-03 17:15:38
+* @Last Modified time: 2017-07-07 10:55:44
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -45,6 +45,15 @@ var getHtmlConfig = function (name) {
             { test: /\.string$/, loader: 'html-loader'}
         ]
      },
+     resolve : {
+        alias : {
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+        }
+    },
      plugins: [
         //独立通用模块到js/base.js
          new webpack.optimize.CommonsChunkPlugin({
