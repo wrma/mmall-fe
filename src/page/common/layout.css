@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 09:44:03
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 10:15:11
+* @Last Modified time: 2017-07-07 16:04:01
 */
 /* css reset */
 *{
@@ -94,7 +94,7 @@ input[type='checkbox']{
     padding: 0 10px;
 }
 /* loading */
-/*.loading{
+.loading{
     margin: 10px auto;
     display: block;
     width: 65px;
@@ -103,4 +103,4 @@ input[type='checkbox']{
     border-radius: 5px;
     background: url(../../image/icon/loading.gif) no-repeat;
     opacity: .6;
-}*/
+}

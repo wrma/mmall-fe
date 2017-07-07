@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-06-30 19:16:33
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 10:55:44
+* @Last Modified time: 2017-07-07 16:04:29
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -39,9 +39,11 @@ var getHtmlConfig = function (name) {
      },
      module: {
         loaders:[
+            // { test:/\.css/,loader:ExtractTextPlugin.extract("style-loader","css-loader")},
+            // //探测到后缀名为.css的文件，就对其使用style-loader和css-loader
+            // //{ test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
             { test:/\.css/,loader:ExtractTextPlugin.extract("style-loader","css-loader")},
-            //探测到后缀名为.css的文件，就对其使用style-loader和css-loader
-            //{ test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+            { test:/\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,loader:'url-loader?limit=100&name=resource/[name].[ext]'},
             { test: /\.string$/, loader: 'html-loader'}
         ]
      },
@@ -51,7 +53,7 @@ var getHtmlConfig = function (name) {
             util            : __dirname + '/src/util',
             page            : __dirname + '/src/page',
             service         : __dirname + '/src/service',
-            image           : __dirname + '/src/image'
+            image           : __dirname + '/src/image',
         }
     },
      plugins: [

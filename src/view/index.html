@@ -4,11 +4,13 @@
     <%= require('html-loader!./layout/head-common.html') %>
     </head>
     <body>
+     <%= require('html-loader!./layout/nav-simple.html') %>
         <div>
             <a href="" class="link">test</a>
             <a href="" class="link-text">test</a>
         </div>
         <div><button class="btn">test</button><button class="btn btn-mini">test</button></div>
+        <div class="loading"></div>
     <%= require('html-loader!./layout/footer.html') %>
     </body>
-</html>
+</html> 
