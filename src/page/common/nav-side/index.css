@@ -1,0 +1,29 @@
+/*
+* @Author: ThinkPad
+* @Date:   2017-07-10 09:05:16
+* @Last Modified by:   ThinkPad
+* @Last Modified time: 2017-07-10 15:56:04
+*/
+
+/* 导航主题 */
+.nav-side{
+    float: left;
+    width: 130px;
+    /*background: #000;*/
+}
+
+.nav-side .nav-item{
+    line-height: 25px;
+    font-size: 13px;
+}
+.nav-side .nav-item .link{
+    color: #888;
+}
+.nav-side .nav-item.active .link{
+    color: #c60023;
+}
+/* 右侧内容区 */
+.content.with-nav{
+    float: left;
+    width: 150px;
+}

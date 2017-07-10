@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 21:18:23
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 22:53:37
+* @Last Modified time: 2017-07-07 22:57:31
 */
 
 'use strict';
@@ -15,6 +15,7 @@ var header = {
         this.bindEvent();
     },
     onLoad : function(){
+        //获取url参数
         var keyword = _mm.getUrlParam('keyword');
         //keyword存在，则回填输入框
         if (keyword) {
@@ -29,8 +30,9 @@ var header = {
         });
         //输入回车后，做搜索提交
         $('#search-input').keyup(function(e){
+            //回车键的值为13
             if (e.keyCode === 13) {
-                _this.searchSubmit();    
+                _this.searchSubmit();
             }
         });
 
