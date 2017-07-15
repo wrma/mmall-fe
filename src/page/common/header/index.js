@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 21:18:23
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 22:57:31
+* @Last Modified time: 2017-07-11 17:02:45
 */
 
 'use strict';
@@ -22,6 +22,7 @@ var header = {
             $('#search-input').val(keyword);
         };
     },
+    //事件绑定，点击搜索或回车后提交请求
     bindEvent : function(){
         var _this = this;
         //点击搜索按钮后，做搜索提交
@@ -38,6 +39,7 @@ var header = {
 
     },
     searchSubmit : function(){
+        //得到搜索框内的数据
         var keyword = $.trim($('#search-input').val());
         //如果提交时有keyword，正常跳转到list页
         if (keyword) {

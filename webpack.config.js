@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-06-30 19:16:33
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-10 18:40:34
+* @Last Modified time: 2017-07-13 22:46:10
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -26,10 +26,10 @@ var getHtmlConfig = function (name,title) {
 //webpackconfig
  var config = {
      entry: {
-        'result': ['./src/page/result/index.js'],
-        'common': ['./src/page/common/index.js'],
-        'index' : ['./src/page/index/index.js'],
-        'login' : ['./src/page/login/index.js'],
+        'result'        : ['./src/page/result/index.js'],
+        'common'        : ['./src/page/common/index.js'],
+        'index'         : ['./src/page/index/index.js'],
+        'user-login'    : ['./src/page/user-login/index.js'],
      },
      output: {
          path: './dist',//存放文件的根目录
@@ -66,7 +66,7 @@ var getHtmlConfig = function (name,title) {
          new ExtractTextPlugin('css/[name].css'),
          //html模板的处理
          new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-         new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
          new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
      ]
  };

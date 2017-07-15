@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-10 09:05:24
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-10 16:14:31
+* @Last Modified time: 2017-07-11 16:49:31
 */
 
 'use strict';
@@ -24,6 +24,7 @@ var navSide = {
     },
     init : function(option){
         //合并选项
+        //$.extend()??????
         $.extend(this.option,option);
         this.renderNav();
     },
@@ -31,7 +32,9 @@ var navSide = {
     renderNav : function(){
         //计算active数据
         for(var i = 0, iLength = this.option.navList.length ; i<iLength ; i++)
+            //page/index/index.js中navSide.init({ name:'user-center'})使user-center
             if (this.option.navList[i].name === this.option.name) {
+                //给navList里的对象新增了一个isActive属性
                 this.option.navList[i].isActive = true;
             }
             //渲染List数据

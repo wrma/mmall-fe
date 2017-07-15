@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 10:51:31
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 11:26:16
+* @Last Modified time: 2017-07-13 22:38:52
 */
 
 'use strict';
@@ -20,6 +20,7 @@ var _mm = {
             url         : param.url     || '',
             dataType    : param.type    || 'json',
             data        : param.data    || '',
+            //res是后台传回来的数据，类型应该是一个JSON对象，这个对象和对象数据都是和后台约定好的
             success     : function(res){
                 // 请求成功
                 if(0 === res.status){
@@ -41,6 +42,7 @@ var _mm = {
     },
     // 获取服务器地址
     getServerUrl : function(path){
+        //为什么不直接用path?
         return conf.serverHost + path;
     },
     // 获取url参数
@@ -51,7 +53,9 @@ var _mm = {
     },
     // 渲染html模板
     renderHtml : function(htmlTemplate, data){
+        // 模板的编译
         var template    = Hogan.compile(htmlTemplate),
+        // 模板的渲染
             result      = template.render(data);
         return result;
     },
@@ -81,8 +85,9 @@ var _mm = {
     },
     // 统一登录处理
     doLogin : function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
+    //回到首页
     goHome : function(){
         window.location.href = './index.html';
     }
