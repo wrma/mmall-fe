@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-06-30 19:41:07
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-15 17:01:13
+* @Last Modified time: 2017-07-16 14:21:59
 */
 'use strict';
 
@@ -66,6 +66,7 @@ var page = {
             status  : false,
             msg     : '',
         };
+        // type == "require" 非空验证
         if (!_mm.validate(formData.username,'require')) {
             result.msg = '用户名不能为空';
             return result;

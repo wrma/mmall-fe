@@ -1,0 +1,27 @@
+/*
+* @Author: ThinkPad
+* @Date:   2017-07-29 12:15:36
+* @Last Modified by:   ThinkPad
+* @Last Modified time: 2017-07-31 14:04:31
+*/
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-line .label{
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    /*为什么这里加color没有效果？*/
+    /*color: white;*/
+}
+/*input不能继承样式，故要重新写input的样式*/
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    width: 200px;
+}

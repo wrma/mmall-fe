@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-06-30 19:16:33
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-13 22:46:10
+* @Last Modified time: 2017-07-31 14:08:48
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -26,10 +26,15 @@ var getHtmlConfig = function (name,title) {
 //webpackconfig
  var config = {
      entry: {
-        'result'        : ['./src/page/result/index.js'],
-        'common'        : ['./src/page/common/index.js'],
-        'index'         : ['./src/page/index/index.js'],
-        'user-login'    : ['./src/page/user-login/index.js'],
+        'result'                : ['./src/page/result/index.js'],
+        'common'                : ['./src/page/common/index.js'],
+        'index'                 : ['./src/page/index/index.js'],
+        'user-login'            : ['./src/page/user-login/index.js'],
+        'user-register'         : ['./src/page/user-register/index.js'],
+        'user-center'           : ['./src/page/user-center/index.js'],
+        'user-center-update'    : ['./src/page/user-center-update/index.js'],
+        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js'],
+        'user-pass-update'       : ['./src/page/user-pass-update/index.js'],
      },
      output: {
          path: './dist',//存放文件的根目录
@@ -68,6 +73,11 @@ var getHtmlConfig = function (name,title) {
          new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
          new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
          new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','重置密码')),
+         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
      ]
  };
 

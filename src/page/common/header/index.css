@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 21:18:29
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-10 09:47:20
+* @Last Modified time: 2017-07-29 17:34:19
 */
 /* 通用头部导航 */
 .header .logo{
@@ -13,6 +13,7 @@
     font-size: 36px;
     color: #c60023;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .header .search-con{
@@ -32,4 +33,18 @@
     position: absolute;
     height: 44px;
     width: 80px;
+}
+
+/* 面包屑导航 */
+/*为什么面包屑导航要写在header里*/
+
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-top: 2px solid  #c60023;
+
 }

@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 09:44:03
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-07 16:04:01
+* @Last Modified time: 2017-07-31 09:40:18
 */
 /* css reset */
 *{
@@ -50,6 +50,7 @@ input[type='checkbox']{
 }
 .panel .panel-body{
     padding: 10px;
+    /*清除浮动*/
     overflow: hidden;
 }
 

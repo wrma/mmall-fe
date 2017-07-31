@@ -1,10 +1,11 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-17 17:04:32
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-24 17:11:19
+* @Last Modified by:   ThinkPad
+* @Last Modified time: 2017-07-22 16:02:49
 */
 
+//为了请求后端
 'use strict';
 
 var _mm = require('util/mm.js');

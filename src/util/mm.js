@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 10:51:31
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-13 22:38:52
+* @Last Modified time: 2017-07-24 08:09:19
 */
 
 'use strict';
@@ -24,6 +24,7 @@ var _mm = {
             success     : function(res){
                 // 请求成功
                 if(0 === res.status){
+                    // 检测到 param.success是一个函数，则使用 param.success
                     typeof param.success === 'function' && param.success(res.data, res.msg);
                 }
                 // 没有登录状态，需要强制登录
@@ -35,6 +36,7 @@ var _mm = {
                     typeof param.error === 'function' && param.error(res.msg);
                 }
             },
+            // ？？？？什么意思
             error       : function(err){
                 typeof param.error === 'function' && param.error(err.statusText);
             }
