@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-07-07 21:18:23
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-07-11 17:02:45
+* @Last Modified time: 2017-08-01 10:28:47
 */
 
 'use strict';
@@ -13,6 +13,7 @@ var _mm = require('util/mm.js');
 var header = {
     init : function(){
         this.bindEvent();
+        this.onLoad();
     },
     onLoad : function(){
         //获取url参数
