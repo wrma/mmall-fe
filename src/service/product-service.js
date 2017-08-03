@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-08-01 10:24:41
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-02 09:36:06
+* @Last Modified time: 2017-08-03 15:35:25
 */
 
 'use strict';
@@ -18,6 +18,17 @@ var _product = {
             success : resolve,
             error   : reject
         });
-    }
+    },
+    //获取商品详细信息
+    getProductDetail : function(productId, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/product/detail.do'),
+            data    : {
+                productId : productId
+            },
+            success : resolve,
+            error   : reject
+        });
+    },
 }
 module.exports = _product;

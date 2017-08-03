@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-08-01 10:15:49
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-02 14:46:48
+* @Last Modified time: 2017-08-02 15:30:01
 */
 
 'use strict';
@@ -22,7 +22,7 @@ var page = {
             categoryId  : _mm.getUrlParam('categoryId') ||  '',
             orderBy     : _mm.getUrlParam('orderBy')    ||  'default',
             pageNum     : _mm.getUrlParam('pageNum')    ||  1,
-            pageSize    : _mm.getUrlParam('pageSize')   ||  2
+            pageSize    : _mm.getUrlParam('pageSize')   ||  20
 
         }
     },

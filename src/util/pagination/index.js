@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-08-02 09:54:31
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-02 11:41:53
+* @Last Modified time: 2017-08-02 15:19:08
 */
 
 'use strict';
@@ -10,6 +10,7 @@ require('./index.css');
 var _mm = require('util/mm.js');
 var templatePagination = require('./index.string');
 
+//构造函数
 var Pagination = function(){
     var _this = this;
     this.defaultOption = {
@@ -29,6 +30,8 @@ var Pagination = function(){
             ? _this.option.onSelectPage($this.data('value')) : null;
     });
 };
+
+
 //渲染分页组件
 Pagination.prototype.render = function(userOption) {
     //合并选项
@@ -50,6 +53,7 @@ Pagination.prototype.getPaginationHtml = function(){
     var html        = '',
         pageArray   = [],
         option      = this.option,
+        // 分页开始和结束的地方
         start       = option.pageNum - option.pageRange > 0
             ? option.pageNum - option.pageRange : 1,
         end         = option.pageNum + option.pageRange < option.pages
