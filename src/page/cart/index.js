@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-08-04 15:23:36
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-04 20:25:23
+* @Last Modified time: 2017-08-05 15:16:15
 */
 
 'use strict';
@@ -133,7 +133,7 @@ var page = {
           $(document).on('click','.btn-submit',function(){
                 //总价大于0，进行提交
                 if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                    window.location.href = './confirm.html';
+                    window.location.href = './order-confirm.html';
                 }else{
                     _mm.errorTips('请选择商品后再提交');
                 }

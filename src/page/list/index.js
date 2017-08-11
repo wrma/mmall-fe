@@ -2,7 +2,7 @@
 * @Author: ThinkPad
 * @Date:   2017-08-01 10:15:49
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-02 15:30:01
+* @Last Modified time: 2017-08-10 17:17:07
 */
 
 'use strict';
@@ -67,7 +67,7 @@ var page = {
                     _this.data.listParam.orderBy = 'price_desc';
                 }
             }
-            //重新加载List数据
+            //重新加载List数据（可以重新回到第一页）
             _this.loadList();
         });
     },
